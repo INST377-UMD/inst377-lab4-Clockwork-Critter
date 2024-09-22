@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+   .half1 {
+    display: inline-grid;
+    grid-auto-flow: column;
+   } 
+</style>
+<body>
+<h1> Lab 04</h1>
+<div class="whole">
+<div class="half1">
+    <form name="contactForm" onsubmit="return(formValidation())" action=>
+        <label>First Name</label>
+        <input type="text" placeholder="Name" id="firstName">
+        <br>
+
+        <input type="submit">
+    </form>
+
+    <script type="text/javascript">
+        function formValidation() {
+            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if(document.contactForm.firstName.value === "") {
+                document.body.style.backgroundColor = 'orange';
+                alert('Enter a First Name!!!');
+                return false;
+            }
+            alert("Hello "+document.contactForm.firstName.value)
+            return true;
+        }
+    </script>
+    <button onclick="changeColor()">CHANGE THE COLOR</button>
+
+    <script type="text/javascript">
+        function changeColor() {            
+            if(document.body.style.backgroundColor = 'white') 
+            {
+                document.body.style.backgroundColor = 'red';
+            } 
+            else {
+                document.body.style.backgroundColor = 'white';
+            }
+        }
+    </script>
+
+</div>
+</div>
+</body>
+</html>
